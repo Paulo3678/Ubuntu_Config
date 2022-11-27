@@ -97,16 +97,14 @@
 > nano meusite.conf <br>
 **Para abrir o arquivo de configurações no editor do linux**
 
-> &lt;VirtualHost *80&gt; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;ServerName meusite.com.br
-&nbsp;&nbsp;&nbsp;&nbsp;ServerAdmin webmaster@localhost
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;Directory /var/www/projeto&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Options Indexes FollowSymLinks
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AllowOverride All
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Require all granted
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Directory&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;ErrorLog &#x24;{APACHE_LOG_DIR }/error.log
-&nbsp;&nbsp;&nbsp;&nbsp;CustomLog &#x24;{APACHE_LOG_DIR}/access.log combined
+
+> &lt;VirtualHost *:80&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;ServerAdmin admin@example.com <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;ServerName example.com <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;ServerAlias site.com.br <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot /var/www/html/teste <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;ErrorLog &#x24;{APACHE_LOG_DIR}/error.log <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;CustomLog &#x24;{APACHE_LOG_DIR}/access.log combined <br/>
 &lt;/VirtualHost&gt;
 <br>
 **Configuração para qualquer arquivo .conf criado futuramente, sendo necessário trocar apenas o "meusite.com.br" e o "/projeto"**
