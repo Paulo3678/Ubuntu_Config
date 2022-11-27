@@ -98,7 +98,7 @@
 **Para abrir o arquivo de configurações no editor do linux**
 
 
-> &lt;VirtualHost *:80&gt;
+> &lt;VirtualHost *:80&gt; </br>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerAdmin admin@example.com <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerName example.com <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerAlias site.com.br <br/>
