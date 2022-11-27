@@ -1,3 +1,6 @@
+<p align="center">
+    <img src="/images/ubuntu.png"/>
+</p>
 # Configurando Apache
 
 > sudo su <br>
