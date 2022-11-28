@@ -12,29 +12,29 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 # Configurando Apache
 
-> sudo su <br>
-**Para entrar no modo de super usuário**
+1º Entrando em super usuário <br>
+> sudo su  <br>
 
+2º Atualizar pacotes do sistema <br>
 > apt-get update <br>
-**Verificando atualizações**
 
+3º Instalando o apache <br>
 > apt-get install apache2 <br>
-**Instala o apache**
 
+4º Verificando portas disponiveis no apache <br>
 > sudo ufw app info "Apache Full" <br>
-**Ver portas disponíveis do apache**
 
+5º Permitindo HTTP e HTTPS <br>
 > sudo ufw allow in "Apache Full" <br>
-**Permitindo HTTP e HTTPS**
 
+6º Para ver configurações da sua rede (como o ip) <br>
 > apt install net-tools <br>
-**Para ver configurações da sua rede (como o ip)**
 
+7º Ver seu ip <br>
 > ifconfig -a <br>
-**Para ver seu ip**
 
+8º Instalando as configurações do PHP para o apache <br>
 > apt install libapache2-mod-php7.3 <br>
-**Configurações do php para o apache**
 
 <br>
 
@@ -46,24 +46,24 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 # Configurando PHP
 
+1º Entrando em super usuário <br>
 > sudo su <br>
-**Para entrar no modo de super usuário**
 
+2º Atualizar pacotes do sistema <br>
 > apt-get update <br>
-**Verificando atualizações**
 
+3º Configurações gerais do PHP  <br>
 > apt -y install software-properties-common <br>
 > add-apt-repository ppa:ondrej/php <br>
-**Configurações gerais**
 
+4º Atualizar pacotes do sistema <br>
 > apt-get update <br>
-**Atualizar repositórios**
 
+5º Instalando o php (Pode ser qualquer outra versão) <br>
 > apt -y install php7.3 <br>
-**Instala o php 7.3 (pode qualquer outra versão)**
 
+6º Instalando as configurações mysql para o php <br>
 > apt install php7.3-mysql <br>
-**Instala as configurações do mysql para o php**
 
 <hr>
 
@@ -74,43 +74,43 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 # Configurando Composer
 
+1º Entrando em super usuário <br>
 > sudo su <br>
-**Para entrar no modo de super usuário**
 
+2º Atualizar pacotes do sistema <br>
 > apt-get update <br>
-**Verificando atualizações**
 
+3º Instalando o curl, usado para baixar o composer <br>
 > sudo apt install curl <br>
-**Instala o curl, usado para baixar o composer** <br>
+
+4º Instalando a cli unzip do php, para extrair o arquivo do composer <br>
 > sudo apt install php-cli unzip <br>
-**Instala a cli unzip do php, para extrair o arquivo do composer** <br>
 
-> curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
-**Baixa o instalador do composer**
+5º Baixando o instalador do composer <br>
+> curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php <br>
 
-> HASH=`curl -sS https://composer.github.io/installer.sig`
-**Configura o hash do instalador**
+6º Configurando o hash do instalador <br>
+> HASH=`curl -sS https://composer.github.io/installer.sig` <br>
 
-<h6>-- Verifcando o instalação</h6>
-
+7º Verificando a instalação <br>
 > echo $HASH <br>
 >> **Output** <br>
->>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a 
+>>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a  <br>
 
 >php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" <br>
 >> **Output** <br>
->>Installer verified
+>>Installer verified <br>
 
 > sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer <br>
 >> **Output** <br>
 >>All settings correct for using Composer <br>
 >>Downloading... <br>
 >>Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer <br>
->>Use it: php /usr/local/bin/composer
+>>Use it: php /usr/local/bin/composer <br>
 
+8º Rodando o composer <br>
+> composer <br>
 
-> composer
-> **Roda o composer**
 <hr>
 
 <p align="center">
@@ -118,20 +118,20 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 </p>
 
 # Configurando MySQL
+1º Entrando em super usuário <br>
 > sudo su <br>
-**Para entrar no modo de super usuário**
 
+2º Atualizar pacotes do sistema <br>
 > apt-get update <br>
-**Verificando atualizações**
 
+3º Instalando o MySQL <br>
 > apt install mysql-server <br>
-**Instala o mysql**
 
+4º Configurações do MySQL <br>
 > mysql_secure_installation <br>
-**Inicia as configurações do MySQL**
 
+5º Loggando no MySQL <br>
 > mysql -h localhost -u root -p <br>
-**Para loggar no MySQL**
 
 <hr>
 
@@ -141,25 +141,29 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 # Configurando Virtual Host
 
-> sudo su <br> <br>
-**Para entrar no modo de super usuário**
+1º Entrando em super usuário <br>
+> sudo su <br>
 
+2º Atualizar pacotes do sistema <br>
+> apt-get update <br>
+
+3º Acessando o arquivo onde colocaremos o nome do nosso virtualhost <br>
 > nano /etc/hosts <br>
-**Abri o arquivo onde colocaremos o nome do nosso virtualhost** 
+ 
+4º Adicionando um host ao seu computador (ctrl+o para salvar) <br>
 >> 127.0.0.1 meusite.com.br <br>
-**Adiciona o host ao seu computador (ctrl+o para salvar)**
 
+5º Acessando diretório de arquivos do apache <br>
 > cd /etc/apache2/sites-available <br>
-**Diretório de arquivos do apache**
 
+6º Criando um arquivo de configurações para o seu site   <br>
 > cp 000-default.conf meusite.conf <br>
-**Cria um arquivo de configurações para o seu site**
 
+7º Abrindo o arquivo de configurações no editor do linux  <br>
 > nano meusite.conf <br>
-**Para abrir o arquivo de configurações no editor do linux**
 
-
-> &lt;VirtualHost *:80&gt; </br>
+8º Configuração para qualquer arquivo .conf criado futuramente, sendo necessário trocar apenas o "meusite.com.br" e o "/projeto" <br>
+> &lt;VirtualHost *:80&gt; </>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerAdmin admin@example.com <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerName example.com <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerAlias site.com.br <br/>
@@ -167,14 +171,15 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
     &nbsp;&nbsp;&nbsp;&nbsp;ErrorLog &#x24;{APACHE_LOG_DIR}/error.log <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;CustomLog &#x24;{APACHE_LOG_DIR}/access.log combined <br/>
 &lt;/VirtualHost&gt; <br>
-**Configuração para qualquer arquivo .conf criado futuramente, sendo necessário trocar apenas o "meusite.com.br" e o "/projeto"**
 
 
+9º Ativando o vhost <br>
 > a2ensite meusite.conf
-**Para ativar o vhost**
 
+10º Desativando o vhost padrão <br>
 > a2dissite 000-default.conf
-**Para desativar o arquivo padrão**
 
+11º Atualizando o apache com as novas configurações <br>
 > systemctl reload apache2
-**Para recarregar o apache com esse novo host**
+
+12º Basta acessar o meusite.com.br no seu navegador preferido <br>
