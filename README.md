@@ -43,7 +43,9 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 <p align="center">
     <img src="/images/php.png" width="200"/>
 </p>
+
 # Configurando PHP
+
 > sudo su <br>
 **Para entra no modo de super usuário**
 
