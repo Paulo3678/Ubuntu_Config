@@ -59,6 +59,37 @@
 > apt-get update <br>
 **Verificando atualizações**
 
+> sudo apt install curl
+**Instala o curl, usado para baixar o composer**
+> sudo apt install php-cli unzip
+**Instala a cli unzip do php, para extrair o arquivo do composer**
+
+> curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+**Baixa o instalador do composer**
+
+> HASH=`curl -sS https://composer.github.io/installer.sig`
+**Configura o hash do instalador**
+
+<h6>-- Verifcando o instalação</h6>
+
+> echo $HASH
+>> **Output**
+>>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a
+
+>php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+>> **Output**
+>>Installer verified
+
+> sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+>> **Output**
+>>All settings correct for using Composer
+>>Downloading...
+>>Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer
+>>Use it: php /usr/local/bin/composer
+
+
+> composer
+> **Roda o composer**
 <hr>
 
 # Configurando MySQL
