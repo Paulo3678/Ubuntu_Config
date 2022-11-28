@@ -76,10 +76,10 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 > apt-get update <br>
 **Verificando atualizações**
 
-> sudo apt install curl
-**Instala o curl, usado para baixar o composer**
-> sudo apt install php-cli unzip
-**Instala a cli unzip do php, para extrair o arquivo do composer**
+> sudo apt install curl <br>
+**Instala o curl, usado para baixar o composer** <br>
+> sudo apt install php-cli unzip <br>
+**Instala a cli unzip do php, para extrair o arquivo do composer** <br>
 
 > curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 **Baixa o instalador do composer**
