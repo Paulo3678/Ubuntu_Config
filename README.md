@@ -89,19 +89,19 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 <h6>-- Verifcando o instalação</h6>
 
-> echo $HASH
->> **Output**
->>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a
+> echo $HASH <br>
+>> **Output** <br>
+>>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a 
 
->php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
->> **Output**
+>php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" <br>
+>> **Output** <br>
 >>Installer verified
 
-> sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
->> **Output**
->>All settings correct for using Composer
->>Downloading...
->>Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer
+> sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer <br>
+>> **Output** <br>
+>>All settings correct for using Composer <br>
+>>Downloading... <br>
+>>Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer <br>
 >>Use it: php /usr/local/bin/composer
 
 
