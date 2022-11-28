@@ -69,7 +69,9 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 <p align="center">
     <img src="/images/composer.png" width="200"/>
 </p>
+
 #Configurando Composer
+
 > sudo su <br>
 **Para entra no modo de super usuário**
 
