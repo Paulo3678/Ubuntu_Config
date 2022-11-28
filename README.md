@@ -70,10 +70,10 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
     <img src="/images/composer.png" width="200"/>
 </p>
 
-#Configurando Composer
+# Configurando Composer
 
 > sudo su <br>
-**Para entra no modo de super usuário**
+**Para entrar no modo de super usuário**
 
 > apt-get update <br>
 **Verificando atualizações**
