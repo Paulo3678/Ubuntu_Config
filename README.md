@@ -1,6 +1,15 @@
 <p align="center">
     <img src="/images/ubuntu.png"/>
 </p>
+
+Este documento foi criado para ajudar aqueles que, como eu, precisam configurar em um máquina o Apache, PHP, Virtual Hosts e o MySQL.
+<br>
+Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito hehe compartilhe com algum amigo 😁.
+
+<p align="center">
+    <img src="/images/apache.png" width="200"/>
+</p>
+
 # Configurando Apache
 
 > sudo su <br>
@@ -27,9 +36,13 @@
 > apt install libapache2-mod-php7.3 <br>
 **Configurações do php para o apache**
 
-<!-- > chmod 777 /var/www/&lt;seu diretorio&gt; --> <br>
+<br>
+
 <hr>
 
+<p align="center">
+    <img src="/images/php.png" width="200"/>
+</p>
 # Configurando PHP
 > sudo su <br>
 **Para entra no modo de super usuário**
@@ -52,6 +65,10 @@
 
 <hr>
 
+
+<p align="center">
+    <img src="/images/composer.png" width="200"/>
+</p>
 #Configurando Composer
 > sudo su <br>
 **Para entra no modo de super usuário**
@@ -92,6 +109,10 @@
 > **Roda o composer**
 <hr>
 
+<p align="center">
+    <img src="/images/mysql.png" width="200"/>
+</p>
+
 # Configurando MySQL
 > sudo su <br>
 **Para entra no modo de super usuário**
@@ -108,6 +129,10 @@
 > mysql -h localhost -u root -p <br>
 **Para loggar no MySQL**
 
+
+<p align="center">
+    <img src="/images/vhost.png" width="200"/>
+</p>
 
 # Configurando Virtual Host
 
