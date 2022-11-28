@@ -1,13 +1,98 @@
 <p align="center">
-    <img src="/images/ubuntu.png"/>
+    <img src="./images/ubuntu.png"/>
 </p>
 
 Este documento foi criado para ajudar aqueles que, como eu, precisam configurar em um máquina o Apache, PHP, Virtual Hosts e o MySQL.
 <br>
 Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito hehe compartilhe com algum amigo 😁.
 
+
+
 <p align="center">
-    <img src="/images/apache.png" width="200"/>
+    <img src="./images/php.png" width="200"/>
+</p>
+
+# Configurando PHP
+
+
+1º Atualizar pacotes do sistema <br>
+> sudo apt-get update <br>
+
+2º Configurações gerais do PHP  <br>
+> sudo apt -y install software-properties-common <br>
+> sudo add-apt-repository ppa:ondrej/php <br>
+
+3º Atualizar pacotes do sistema <br>
+> sudo apt-get update <br>
+
+4º Instalando o php (Pode ser qualquer outra versão) <br>
+> sudo apt -y install php7.3 <br>
+
+5º Instalando as configurações mysql para o php <br>
+> sudo apt install php7.3-mysql <br>
+
+<hr>
+
+
+<p align="center">
+    <img src="./images/composer.png" width="200"/>
+</p>
+
+# Configurando Composer
+
+1º Verificar versão atual do php
+> php -v
+
+2º Atualizar pacotes do sistema <br>
+> apt-get update <br>
+
+3º Verificar versão atual do php
+> php -v
+
+<hr>
+
+**⚠️ WARNING: Caso a versão não seja igual a que você instalou anteriormente ⬇** <br>
+
+4º Para alterar versão do php (O "update" pode alterar para a versão 8.* em versões mais atuais do ubuntu)
+> sudo update-alternatives --config php
+
+<hr>
+
+5º Instalando o curl, usado para baixar o composer <br>
+> sudo apt install curl <br>
+
+6º Instalando a cli unzip do php, para extrair o arquivo do composer <br>
+> sudo apt install php-cli unzip <br>
+
+7º Baixando o instalador do composer <br>
+> curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php <br>
+
+8º Configurando o hash do instalador <br>
+> HASH=`curl -sS https://composer.github.io/installer.sig` <br>
+
+9º Verificando a instalação <br>
+> echo $HASH <br>
+>> **Output** <br>
+>>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a  <br>
+
+>php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" <br>
+>> **Output** <br>
+>>Installer verified <br>
+
+> sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer <br>
+>> **Output** <br>
+>>All settings correct for using Composer <br>
+>>Downloading... <br>
+>>Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer <br>
+>>Use it: php /usr/local/bin/composer <br>
+
+10º Rodando o composer <br>
+> composer <br>
+
+<hr>
+
+<p align="center">
+    <img src="./images/apache.png" width="200"/>
 </p>
 
 # Configurando Apache
@@ -40,103 +125,35 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 <hr>
 
-<p align="center">
-    <img src="/images/php.png" width="200"/>
-</p>
-
-# Configurando PHP
-
-1º Entrando em super usuário <br>
-> sudo su <br>
-
-2º Atualizar pacotes do sistema <br>
-> apt-get update <br>
-
-3º Configurações gerais do PHP  <br>
-> apt -y install software-properties-common <br>
-> add-apt-repository ppa:ondrej/php <br>
-
-4º Atualizar pacotes do sistema <br>
-> apt-get update <br>
-
-5º Instalando o php (Pode ser qualquer outra versão) <br>
-> apt -y install php7.3 <br>
-
-6º Instalando as configurações mysql para o php <br>
-> apt install php7.3-mysql <br>
-
-<hr>
 
 
 <p align="center">
-    <img src="/images/composer.png" width="200"/>
-</p>
-
-# Configurando Composer
-
-1º Entrando em super usuário <br>
-> sudo su <br>
-
-2º Atualizar pacotes do sistema <br>
-> apt-get update <br>
-
-3º Instalando o curl, usado para baixar o composer <br>
-> sudo apt install curl <br>
-
-4º Instalando a cli unzip do php, para extrair o arquivo do composer <br>
-> sudo apt install php-cli unzip <br>
-
-5º Baixando o instalador do composer <br>
-> curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php <br>
-
-6º Configurando o hash do instalador <br>
-> HASH=`curl -sS https://composer.github.io/installer.sig` <br>
-
-7º Verificando a instalação <br>
-> echo $HASH <br>
->> **Output** <br>
->>e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a  <br>
-
->php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" <br>
->> **Output** <br>
->>Installer verified <br>
-
-> sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer <br>
->> **Output** <br>
->>All settings correct for using Composer <br>
->>Downloading... <br>
->>Composer (version 2.2.9) successfully installed to: /usr/local/bin/composer <br>
->>Use it: php /usr/local/bin/composer <br>
-
-8º Rodando o composer <br>
-> composer <br>
-
-<hr>
-
-<p align="center">
-    <img src="/images/mysql.png" width="200"/>
+    <img src="./images/mysql.png" width="200"/>
 </p>
 
 # Configurando MySQL
-1º Entrando em super usuário <br>
-> sudo su <br>
+1º Atualizando pacotes do sistema <br>
+> sudo apt update <br>
 
-2º Atualizar pacotes do sistema <br>
-> apt-get update <br>
+2º Instalando o MySQL <br>
+> sudo apt install mysql-server <br>
 
-3º Instalando o MySQL <br>
-> apt install mysql-server <br>
+3º Abrindo o MySQL para configurar a senha <br>
+> sudo mysql <br>
 
-4º Configurações do MySQL <br>
+4º Com o MySQL iniciando no terminal digite: <br>
+> alter user 'root'@'localhost' identified with mysql_native_password by 'suasenha' <br>
+
+5º Terminando configuração <br>
 > mysql_secure_installation <br>
 
-5º Loggando no MySQL <br>
-> mysql -h localhost -u root -p <br>
+6º Sequência de respostas sugerida <br>
+> y, 0, n, y, y, y, y <br>
 
 <hr>
 
 <p align="center">
-    <img src="/images/vhost.png" width="200"/>
+    <img src="./images/vhost.png" width="200"/>
 </p>
 
 # Configurando Virtual Host
@@ -163,7 +180,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 > nano meusite.conf <br>
 
 8º Configuração para qualquer arquivo .conf criado futuramente, sendo necessário trocar apenas o "meusite.com.br" e o "/projeto" <br>
-> &lt;VirtualHost *:80&gt; </>
+> &lt;VirtualHost *:80&gt; </br>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerAdmin admin@example.com <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerName example.com <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;ServerAlias site.com.br <br/>
