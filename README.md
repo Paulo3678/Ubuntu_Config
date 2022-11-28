@@ -170,3 +170,11 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 **Configuração para qualquer arquivo .conf criado futuramente, sendo necessário trocar apenas o "meusite.com.br" e o "/projeto"**
 
 
+> a2ensite meusite.conf
+**Para ativar o vhost**
+
+> a2dissite 000-default.conf
+**Para desativar o arquivo padrão**
+
+> systemctl reload apache2
+**Para recarregar o apache com esse novo host**
