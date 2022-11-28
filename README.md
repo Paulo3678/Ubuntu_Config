@@ -168,5 +168,6 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
     &nbsp;&nbsp;&nbsp;&nbsp;CustomLog &#x24;{APACHE_LOG_DIR}/access.log combined <br/>
 &lt;/VirtualHost&gt;
 <br>
+
 **Configuração para qualquer arquivo .conf criado futuramente, sendo necessário trocar apenas o "meusite.com.br" e o "/projeto"**
 
