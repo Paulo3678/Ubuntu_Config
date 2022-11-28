@@ -133,6 +133,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 > mysql -h localhost -u root -p <br>
 **Para loggar no MySQL**
 
+<hr>
 
 <p align="center">
     <img src="/images/vhost.png" width="200"/>
