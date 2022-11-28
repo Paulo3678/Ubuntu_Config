@@ -13,7 +13,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 # Configurando Apache
 
 > sudo su <br>
-**Para entra no modo de super usuário**
+**Para entrar no modo de super usuário**
 
 > apt-get update <br>
 **Verificando atualizações**
@@ -47,7 +47,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 # Configurando PHP
 
 > sudo su <br>
-**Para entra no modo de super usuário**
+**Para entrar no modo de super usuário**
 
 > apt-get update <br>
 **Verificando atualizações**
@@ -119,7 +119,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 
 # Configurando MySQL
 > sudo su <br>
-**Para entra no modo de super usuário**
+**Para entrar no modo de super usuário**
 
 > apt-get update <br>
 **Verificando atualizações**
@@ -141,7 +141,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 # Configurando Virtual Host
 
 > sudo su <br> <br>
-**Para entra no modo de super usuário**
+**Para entrar no modo de super usuário**
 
 > nano /etc/hosts <br>
 **Abri o arquivo onde colocaremos o nome do nosso virtualhost** 
