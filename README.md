@@ -31,6 +31,12 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 5º Instalando as configurações mysql para o php <br>
 > sudo apt install php7.3-mysql <br>
 
+6º Instalando dependências do PHP
+> sudo apt-get install php7.3-mbstring <br>
+> sudo apt install php7.3-xml <br>
+
+
+
 <hr>
 
 
