@@ -142,7 +142,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 >> 
     <Directory /var/www/>  
         Options Indexes FollowSymLinks
-        AllowOverride None
+        AllowOverride All
         Require all granted 
     </Directory>
 
