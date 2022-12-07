@@ -119,13 +119,33 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 > sudo ufw allow in "Apache Full" <br>
 
 6º Para ver configurações da sua rede (como o ip) <br>
-> apt install net-tools <br>
+> sudo apt install net-tools <br>
 
 7º Ver seu ip <br>
 > ifconfig -a <br>
 
 8º Instalando as configurações do PHP para o apache <br>
-> apt install libapache2-mod-php7.3 <br>
+> sudo apt install libapache2-mod-php7.3 <br>
+
+9º Habilitando rotas do site
+> Vá em /etc/apache2
+> sudo nano apache2.conf
+> Busque por:
+>>  
+    <Directory /var/www/>  
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted 
+    </Directory>
+
+>> Substitua por:
+>> 
+    <Directory /var/www/>  
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted 
+    </Directory>
+
 
 <br>
 
