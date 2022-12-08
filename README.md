@@ -34,6 +34,7 @@ Viso ajudar o máximo de pessoas possíveis, então, se não for pedir muito heh
 6º Instalando dependências do PHP
 > sudo apt-get install php7.3-mbstring <br>
 > sudo apt install php7.3-xml <br>
+> sudo apt install -y php7.3 php7.3-gd
 
 
 
